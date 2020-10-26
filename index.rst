@@ -18,7 +18,7 @@ Please select your Branch below
 `Nodes <nodes/index.html>`_
 -----------------------------
 
-`Ways <nodes/index.html>`_
+`Ways <ways/index.html>`_
 ---------------------------
 
 `lpdev <lpdev/index.html>`_
