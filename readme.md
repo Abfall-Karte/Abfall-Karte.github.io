@@ -1,9 +1,13 @@
 # Abfallkarte Documentation
 
-## Branch master
+## Branch main_page
 
-This branch contains Documentation about the Abfallkarte Project.
+This branch contains all Information you need to generate the Main Page of the Documentation
 
-All Documentation added to the code gets automatically pushed here
+**You can view the Documentation [here](https://abfall-karte.github.io/)**
 
-### **You can view the Documentation [here](https://abfall-karte.github.io/)**
+## Building the Documentation 
+
+- Install `Sphinx` & `sphinx_glpi_theme`
+- Run `make html`
+- Copy the contents of `_build/html` to the `master` branch
