@@ -1,6 +1,9 @@
 
 .. currentmodule:: osm_data
 
+.. role:: raw-html(raw)
+    :format: html
+    
 API Reference
 ===============
 
@@ -12,14 +15,20 @@ OSM Data
 .. autoclass:: OSM_data
     :members:
 
-
-.. currentmodule:: overpy
-
-.. autoclass:: Result
-    :members:
+Node
+--------------
 
 .. autoclass:: Node
     :members:
 
+Way
+--------------
+
 .. autoclass:: Way
+    :members:
+
+NodeType
+--------------
+
+.. autoclass:: NodeType
     :members:
