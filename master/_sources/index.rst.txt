@@ -6,10 +6,7 @@
 Welcome to OSM DATA's documentation!
 ====================================
 
-This currently Demos OSM data in a easy to use Python Object
-
-Documentation Contents
------------------------
+OSM Data in an easy Python Object
 
 .. toctree::
    :maxdepth: 2

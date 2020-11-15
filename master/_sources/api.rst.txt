@@ -1,48 +1,34 @@
 
 .. currentmodule:: osm_data
 
+.. role:: raw-html(raw)
+    :format: html
+    
 API Reference
 ===============
 
-The following section outlines the API of OSM DATA
-
-.. note::
-
-    This module uses the Python logging module to log diagnostic and errors
-    in an output independent way.  If the logging module is disabled or the loginlevel is set to high then
-    these logs will not be output anywhere.
-
-Version Related Info
----------------------
-
-The current Version only generates random Data. There will be changes and missing Features in this Release
+The following section outlines the API of the data downloaded from OSM
 
 OSM Data
 --------------
 
-.. autoclass:: OSM
+.. autoclass:: OSM_data
     :members:
 
 Node
----------
+--------------
 
 .. autoclass:: Node
     :members:
 
 Way
---------
+--------------
 
 .. autoclass:: Way
     :members:
 
 NodeType
----------
+--------------
 
 .. autoclass:: NodeType
-    :members:
-
-WayType
--------
-
-.. autoclass:: WayType
     :members:
