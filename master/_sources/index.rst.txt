@@ -8,6 +8,11 @@ Welcome to OSM DATA's documentation!
 
 OSM Data in an easy Python Object
 
+.. note::
+
+    This module uses the Python logging module to log diagnostic and errors
+    in an output independent way. The default log file is `OSM_data.log`
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
