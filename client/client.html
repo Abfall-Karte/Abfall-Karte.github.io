@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Programm Documentation &mdash; Routenfinder-Client 0.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to Routenfinder-Client’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Routenfinder-Client
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Programm Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-client">Main Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-controller">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-network">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-filehandler">FileHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-output">Output</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Routenfinder-Client</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Programm Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/client.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="programm-documentation">
+<h1>Programm Documentation<a class="headerlink" href="#programm-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This is a command line application. You can call the main function with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">client.py</span></code>. In the following documentation this will be shortened to just <code class="docutils literal notranslate"><span class="pre">client.py</span></code>. Then a function in <code class="docutils literal notranslate"><span class="pre">Controller</span></code> is called, which handles the behavior. In the <code class="docutils literal notranslate"><span class="pre">Network</span></code> class everything network related is handled.</p>
+<div class="section" id="module-client">
+<span id="main-class"></span><h2>Main Class<a class="headerlink" href="#module-client" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="client.main">
+<code class="sig-prename descclassname">client.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the main method.
+The command line options are defined here.
+You can call this programm with <code class="docutils literal notranslate"><span class="pre">client.py</span></code>.
+Without arguments it will print out the helptext, which says,
+which arguments are possible. The programm is splitted in several
+subcommands. The helptext will show you them. With <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">SUBCOMMAND</span> <span class="pre">--help</span></code> the helptext for the
+subcommand is printed. For sure you need to replace <em>SUBCOMMAND</em>
+with the desired subcommand.</p>
+<p>Example usage: <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span></code> will ask
+the server for a route and print it as output.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-controller">
+<span id="controller"></span><h2>Controller<a class="headerlink" href="#module-controller" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="controller.Controller">
+<em class="property">class </em><code class="sig-prename descclassname">controller.</code><code class="sig-name descname">Controller</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">confName</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller" title="Permalink to this definition">¶</a></dt>
+<dd><p>The main controller of the programm. Every command will call a function in this class.</p>
+<dl class="py method">
+<dt id="controller.Controller.config">
+<code class="sig-name descname">config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.config" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method handles the command line UI config options. It is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">config</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="controller.Controller.create_config_file">
+<code class="sig-name descname">create_config_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.create_config_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called when no configfile is found or a restoring to the defaults with <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">config</span> <span class="pre">-d</span></code> or <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">config</span> <span class="pre">--defauls</span></code> is requested.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="controller.Controller.debug">
+<code class="sig-name descname">debug</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method handles the debug commands. It is called by the subcommand <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="controller.Controller.route">
+<code class="sig-name descname">route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method calls the <code class="docutils literal notranslate"><span class="pre">route()</span></code> function from Network. This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-network">
+<span id="network"></span><h2>Network<a class="headerlink" href="#module-network" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="network.Network">
+<em class="property">class </em><code class="sig-prename descclassname">network.</code><code class="sig-name descname">Network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">confName</span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class handles all connections with the server.</p>
+<dl class="py method">
+<dt id="network.Network.askRoute">
+<code class="sig-name descname">askRoute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.askRoute" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method asks the server for a route and prints the gathered route as output.
+You can call this function by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="network.Network.ping">
+<code class="sig-name descname">ping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.ping" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method starts a connection to the server and prints the answer.
+It can be used for debug reasions.
+This function can be called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span> <span class="pre">-p</span></code> oder <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span> <span class="pre">--ping</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="network.Network.test">
+<code class="sig-name descname">test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a test method, which can be used to test some code.
+It can be called with <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span> <span class="pre">-t</span></code> or <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span> <span class="pre">--test</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-filehandler">
+<span id="filehandler"></span><h2>FileHandler<a class="headerlink" href="#module-filehandler" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="filehandler.FileHandler">
+<em class="property">class </em><code class="sig-prename descclassname">filehandler.</code><code class="sig-name descname">FileHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">confName</span></em><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class is for handling files.</p>
+<dl class="py method">
+<dt id="filehandler.FileHandler.create_config_file">
+<code class="sig-name descname">create_config_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler.create_config_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the configfile with the name of the instance variable <code class="docutils literal notranslate"><span class="pre">self.confName</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="filehandler.FileHandler.csvExport">
+<code class="sig-name descname">csvExport</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler.csvExport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports the given text into a csv file</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-output">
+<span id="output"></span><h2>Output<a class="headerlink" href="#module-output" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="output.Output">
+<em class="property">class </em><code class="sig-prename descclassname">output.</code><code class="sig-name descname">Output</code><a class="headerlink" href="#output.Output" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class handles the output on the console</p>
+<dl class="py method">
+<dt id="output.Output.generic">
+<code class="sig-name descname">generic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.generic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just prints the given variable</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="output.Output.routeFormat">
+<code class="sig-name descname">routeFormat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.routeFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Formats a given route.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Routenfinder-Client’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Team_B.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

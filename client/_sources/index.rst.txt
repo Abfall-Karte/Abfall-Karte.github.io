@@ -1,0 +1,31 @@
+.. Routenfinder-Client documentation master file, created by
+   sphinx-quickstart on Tue Dec 15 14:25:33 2020.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Routenfinder-Client's documentation!
+===============================================
+
+This documentation documentated the source code from the Routenfinder-Client. This is a project for the module *Software Engineering 2* on the *Universiry of Applied Sciences and Arts Ostwestfalen-Lippe*.  
+
+.. toctree::
+        :maxdepth: 2
+        :caption: Overview:
+
+        client 
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+
+
+This documentation was written by Christian Kemmerling.
+
+Other programms related to this project
+=======================================
+
+* `Abfallkarte from Team A <https://github.com/Abfall-Karte/Abfallkarte>`_ (`Documentation <https://abfall-karte.github.io/>`_)
+* `Routenfinder_Server <https://github.com/Abfall-Karte/Routenfinder-Server>`_ (Documentation coming soon)
+* `Routenalgorithmus <https://github.com/Abfall-Karte/Routenalgorithmus>`_ (Documentation coming soon)

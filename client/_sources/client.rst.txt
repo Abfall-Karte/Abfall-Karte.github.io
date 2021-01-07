@@ -1,0 +1,37 @@
+.. currentmodule:: routenfinder_client
+
+
+Programm Documentation
+======================
+
+This is a command line application. You can call the main function with ``python client.py``. In the following documentation this will be shortened to just ``client.py``. Then a function in ``Controller`` is called, which handles the behavior. In the ``Network`` class everything network related is handled.
+
+Main Class
+----------
+
+.. automodule:: client
+        :members:
+
+Controller
+----------
+
+.. automodule:: controller
+        :members:
+
+Network
+-------
+
+.. automodule:: network
+        :members:
+
+FileHandler
+-----------
+
+.. automodule:: filehandler
+        :members:
+
+Output
+------
+
+.. automodule:: output
+        :members:
