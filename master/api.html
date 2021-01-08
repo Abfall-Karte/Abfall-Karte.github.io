@@ -173,15 +173,226 @@
 <p>The following section outlines the API of the data downloaded from OSM</p>
 <div class="section" id="osm-data">
 <h2>OSM Data<a class="headerlink" href="#osm-data" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="osm_data.OSM_data">
+<em class="property">class </em><code class="sig-prename descclassname">osm_data.</code><code class="sig-name descname">OSM_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">amount</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">100</span></em>, <em class="sig-param"><span class="n">random_seed</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">max_weight</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">100</span></em>, <em class="sig-param"><span class="n">trash_chances</span><span class="p">:</span> <span class="n">Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">(10, 90)</span></em>, <em class="sig-param"><span class="n">loggin_level</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">20</span></em>, <em class="sig-param"><span class="n">skip_update</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osm_data.OSM_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents the OSM Data in an easy to access format
+The data gets currently randomly generated instead of real data being used. <span class="raw-html"><br /></span></p>
+<p><span class="raw-html"><spacer /></span></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>All options except logging will be removed once real data is used</p>
+</div>
+<dl>
+<dt>amount: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></dt><dd><p>The amount of Nodes that need to be generated <span class="raw-html"><br /></span>
+Defaults to <cite>100</cite></p>
+</dd>
+<dt>random_seed: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></dt><dd><p>The seed that is used for all random generations <span class="raw-html"><br /></span>
+Defaults to <cite>0</cite></p>
+</dd>
+<dt>max_weight <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></dt><dd><p>The upper limit for a street weight <span class="raw-html"><br /></span>
+Defaults to <cite>100</cite></p>
+</dd>
+<dt>trash_chances: <code class="xref py py-class docutils literal notranslate"><span class="pre">Tuple[int,</span> <span class="pre">int]</span></code></dt><dd><p>Defines the chances of a node having trash <span class="raw-html"><br /></span>
+Defaults to <cite>(10, 90)</cite></p>
+</dd>
+<dt>logging_level: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></dt><dd><p>Sets the logging level used by the logging module <span class="raw-html"><br /></span>
+Defaults to <cite>INFO</cite></p>
+</dd>
+<dt>skip_update: <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></dt><dd><p>Defines if the update check should be skipped <span class="raw-html"><br /></span>
+Defaults to <cite>false</cite></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please check for updates manually regularly if you disable autoupdate</p>
+</div>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="osm_data.OSM_data.logger">
+<code class="sig-name descname">logger</code><a class="headerlink" href="#osm_data.OSM_data.logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>logger <code class="xref py py-class docutils literal notranslate"><span class="pre">logging</span></code>
+The logger used by the OSM module</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.2.3.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="osm_data.OSM_data.ways">
+<code class="sig-name descname">ways</code><a class="headerlink" href="#osm_data.OSM_data.ways" title="Permalink to this definition">¶</a></dt>
+<dd><p>ways: <code class="xref py py-class docutils literal notranslate"><span class="pre">List[Way]</span></code>
+All ways that are in this dataset</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="osm_data.OSM_data.filtered_nodes">
+<code class="sig-name descname">filtered_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>osm_data.Node.Node<span class="p">]</span><a class="headerlink" href="#osm_data.OSM_data.filtered_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of <a class="reference internal" href="#osm_data.Node" title="osm_data.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a> that are filtered based on the given Parameter</p>
+<dl>
+<dt>filter: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></dt><dd><p>Sets the current parameters that should be filtered out
+<span class="raw-html"><spacer /></span></p>
+<div class="helpful admonition">
+<p class="admonition-title">Parameter Options</p>
+<p><cite>used</cite> - Return only nodes that have at least one way connected <span class="raw-html"><br /></span>
+<cite>trash</cite> - Return only nodes that have trash and at least one way connected</p>
+</div>
+</dd>
+</dl>
+<dl class="simple">
+<dt>NotImplementedError</dt><dd><p>You gave an invalid filter option <span class="raw-html"><br /></span>
+Request filter options here: <a class="reference external" href="https://github.com/Abfall-Karte/Abfallkarte/issues">https://github.com/Abfall-Karte/Abfallkarte/issues</a></p>
+</dd>
+</dl>
+<p>List[<a class="reference internal" href="#osm_data.Node" title="osm_data.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a>]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="osm_data.OSM_data.clean_data_for_benchmark">
+<code class="sig-name descname">clean_data_for_benchmark</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>osm_data.Node.Node<span class="p">, </span>osm_data.Node.Node<span class="p">]</span><a class="headerlink" href="#osm_data.OSM_data.clean_data_for_benchmark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans the internal data so it can be used for a benchmark</p>
+<p>Tuple[<a class="reference internal" href="#osm_data.Node" title="osm_data.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a>, <a class="reference internal" href="#osm_data.Node" title="osm_data.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a>]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="osm_data.OSM_data.visualize">
+<code class="sig-name descname">visualize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nodes</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">ways</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#osm_data.OSM_data.visualize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a visualisation of the current dataset and displays it</p>
+<dl class="simple">
+<dt>Nodes: <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></dt><dd><p>If set to <cite>True</cite> then Nodes are drawn <span class="raw-html"><br /></span>
+Defaults to <cite>True</cite></p>
+</dd>
+<dt>ways: <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></dt><dd><p>If set to <cite>True</cite> then Ways are drawn</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="node">
 <h2>Node<a class="headerlink" href="#node" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="osm_data.Node">
+<em class="property">class </em><code class="sig-prename descclassname">osm_data.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">trash_chances</span><span class="p">:</span> <span class="n">Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#osm_data.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents the Node in the OSM data set</p>
+<p><span class="raw-html"><spacer /></span></p>
+<dl class="simple">
+<dt>x: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></dt><dd><p>The x location of the Node (Longitude)</p>
+</dd>
+<dt>y: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></dt><dd><p>The y Location of the Node (Altitude)</p>
+</dd>
+<dt>trash_chances: <code class="xref py py-class docutils literal notranslate"><span class="pre">Tuple[int,</span> <span class="pre">int]</span></code></dt><dd><p>Defines the chances of a node having trash</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="osm_data.Node.x">
+<code class="sig-name descname">x</code><a class="headerlink" href="#osm_data.Node.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>x: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>
+The x location of the Node (Longitude)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="osm_data.Node.y">
+<code class="sig-name descname">y</code><a class="headerlink" href="#osm_data.Node.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>y: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>
+The y Location of the Node (Altitude)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="osm_data.Node.connected_ways">
+<code class="sig-name descname">connected_ways</code><a class="headerlink" href="#osm_data.Node.connected_ways" title="Permalink to this definition">¶</a></dt>
+<dd><p>connected_ways: :class:List[<cite>Way</cite>]
+All ways that this node is connected to</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="osm_data.Node.trash">
+<code class="sig-name descname">trash</code><a class="headerlink" href="#osm_data.Node.trash" title="Permalink to this definition">¶</a></dt>
+<dd><p>trash: <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>
+Defines if this Node has a Trash container</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="osm_data.Node.type">
+<em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#osm_data.Node.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>type: <a class="reference internal" href="#osm_data.NodeType" title="osm_data.NodeType"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeType</span></code></a>
+Returns the type of the Node</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="way">
 <h2>Way<a class="headerlink" href="#way" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="osm_data.Way">
+<em class="property">class </em><code class="sig-prename descclassname">osm_data.</code><code class="sig-name descname">Way</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_start</span></em>, <em class="sig-param"><span class="n">_end</span></em>, <em class="sig-param"><span class="n">max_weight</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osm_data.Way" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents the Way in the OSM data set</p>
+<p><span class="raw-html"><spacer /></span></p>
+<dl class="simple">
+<dt>_start: Tulpe[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</dt><dd><p>The position data of the start node</p>
+</dd>
+<dt>_end: Tulpe[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</dt><dd><p>The position data of the end node</p>
+</dd>
+<dt>max_weight: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></dt><dd><p>Defines the max weight of the current street</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="osm_data.Way.start">
+<code class="sig-name descname">start</code><a class="headerlink" href="#osm_data.Way.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>start: <a class="reference internal" href="#osm_data.Node" title="osm_data.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a>
+The node where this street starts</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="osm_data.Way.end">
+<code class="sig-name descname">end</code><a class="headerlink" href="#osm_data.Way.end" title="Permalink to this definition">¶</a></dt>
+<dd><p>end: <a class="reference internal" href="#osm_data.Node" title="osm_data.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a>
+The node where this street ends</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="osm_data.Way.weight">
+<code class="sig-name descname">weight</code><a class="headerlink" href="#osm_data.Way.weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>weight: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
+The weight of the current way</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="nodetype">
 <h2>NodeType<a class="headerlink" href="#nodetype" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="osm_data.NodeType">
+<em class="property">class </em><code class="sig-prename descclassname">osm_data.</code><code class="sig-name descname">NodeType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osm_data.NodeType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the type of the a Node</p>
+<dl class="py attribute">
+<dt id="osm_data.NodeType.invalid">
+<code class="sig-name descname">invalid</code><em class="property"> = &lt;NodeType.invalid: -1&gt;</em><a class="headerlink" href="#osm_data.NodeType.invalid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The node is not connected to any streets</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="osm_data.NodeType.street_end">
+<code class="sig-name descname">street_end</code><em class="property"> = &lt;NodeType.street_end: 0&gt;</em><a class="headerlink" href="#osm_data.NodeType.street_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>The node is connected with one node</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="osm_data.NodeType.street">
+<code class="sig-name descname">street</code><em class="property"> = &lt;NodeType.street: 1&gt;</em><a class="headerlink" href="#osm_data.NodeType.street" title="Permalink to this definition">¶</a></dt>
+<dd><p>The node is connected with two nodes</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="osm_data.NodeType.junction">
+<code class="sig-name descname">junction</code><em class="property"> = &lt;NodeType.junction: 2&gt;</em><a class="headerlink" href="#osm_data.NodeType.junction" title="Permalink to this definition">¶</a></dt>
+<dd><p>The nodes is connected with three or more nodes</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 
