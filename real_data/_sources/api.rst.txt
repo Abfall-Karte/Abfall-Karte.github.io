@@ -1,0 +1,34 @@
+
+.. currentmodule:: osm_data
+
+.. role:: raw-html(raw)
+    :format: html
+    
+API Reference
+===============
+
+The following section outlines the API of the data downloaded from OSM
+
+OSM Data
+--------------
+
+.. autoclass:: OSM_data
+    :members:
+
+Node
+--------------
+
+.. autoclass:: Node
+    :members:
+
+Way
+--------------
+
+.. autoclass:: Way
+    :members:
+
+NodeType
+--------------
+
+.. autoclass:: NodeType
+    :members:
