@@ -24,6 +24,12 @@ Please select your Branch below
 `lpdev <lpdev/index.html>`_
 ----------------------------
 
+Documentation Team B: Routenalgorithm
+#####################################
+
+`Routefinder-Client <client/index.html>`_
+=========================================
+
 .. toctree::
    :maxdepth: 2
    :caption: Branches:
