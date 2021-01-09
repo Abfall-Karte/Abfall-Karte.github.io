@@ -139,3 +139,6 @@ dmypy.json
 .history/
 
 osm_data/Update_org.py
+
+unison_history
+_build/
