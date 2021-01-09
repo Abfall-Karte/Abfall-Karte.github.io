@@ -4,25 +4,37 @@
    contain the root `toctree` directive.
 
 Welcome to OSM DATA's documentation!
-#####################################
+####################################
 
 You are currently in the Branch overview
-*****************************************
+****************************************
 
 Please select your Branch below
-================================
+===============================
 
 `Master (Current Release) <master/index.html>`_
-------------------------------------------------
+-----------------------------------------------
 
 `Nodes <nodes/index.html>`_
------------------------------
-
-`Ways <ways/index.html>`_
 ---------------------------
 
+`Ways <ways/index.html>`_
+-------------------------
+
 `lpdev <lpdev/index.html>`_
-----------------------------
+---------------------------
+
+Documentation Team B: Routenalgorithm
+#####################################
+
+`Routefinder-Client <client/index.html>`_
+*****************************************
+
+`Routefinder-Server <server/index.html>`_
+*****************************************
+
+Routingalgorithm (coming soon)
+******************************
 
 .. toctree::
    :maxdepth: 2
