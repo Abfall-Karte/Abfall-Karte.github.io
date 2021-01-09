@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 
 project = 'OSM DATA'
-copyright = '2020, Leon Pawlick (OSM_DATA), Team_B (Routingalgorithm)'
+copyright = '2020-2021, Leon Pawlick (OSM_DATA), Team_B (Routingalgorithm)'
 author = 'Leon Pawlick'
 
 # The full version, including alpha/beta/rc tags
