@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Programm Documentation &mdash; Documentation Routenfinder-Server 0.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to Routenfinder-Server’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Documentation Routenfinder-Server
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Programm Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-server">Main Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-network">Network</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Documentation Routenfinder-Server</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Programm Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/server.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="programm-documentation">
+<h1>Programm Documentation<a class="headerlink" href="#programm-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This is a command line application. You can call the main function with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">server.py</span></code>. In the following documentation this will be shortened to just <code class="docutils literal notranslate"><span class="pre">server.py</span></code>.
+Then a function in <code class="docutils literal notranslate"><span class="pre">Controller</span></code> is called, which handles the behavior. In the <code class="docutils literal notranslate"><span class="pre">Network</span></code> class everything network related is handled.</p>
+<div class="section" id="module-server">
+<span id="main-class"></span><h2>Main Class<a class="headerlink" href="#module-server" title="Permalink to this headline">¶</a></h2>
+<p>The main module of the Routenfinder-Server.</p>
+<dl class="py function">
+<dt id="server.main">
+<code class="sig-prename descclassname">server.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#server.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>main method of the network server.py
+Calls the listen method in client.py so the serveris ready for connection.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-network">
+<span id="network"></span><h2>Network<a class="headerlink" href="#module-network" title="Permalink to this headline">¶</a></h2>
+<p>This Module contains a class with related network tasks.</p>
+<dl class="py class">
+<dt id="network.Network">
+<em class="property">class </em><code class="sig-prename descclassname">network.</code><code class="sig-name descname">Network</code><a class="headerlink" href="#network.Network" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class contains methods related to networking tasks.</p>
+<dl class="py method">
+<dt id="network.Network.listen">
+<code class="sig-name descname">listen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.listen" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method binds the server port and listens for input from the client
+It sends the messages beetween server and client and en- or decodes them.
+Also it closes the server-client connection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="network.Network.ping">
+<code class="sig-name descname">ping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.ping" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns a massage that confirms a successful ping.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="network.Network.route">
+<code class="sig-name descname">route</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.route" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method starts the routing algorithm that returns the best possible route.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="network.Network.switcher">
+<code class="sig-name descname">switcher</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.switcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a switcher method with returns the right method to the listen method.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Routenfinder-Server’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Team_B.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
