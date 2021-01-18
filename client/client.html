@@ -183,6 +183,10 @@ the server for a route and print it as output.</p>
 </div>
 <div class="section" id="module-controller">
 <span id="controller"></span><h2>Controller<a class="headerlink" href="#module-controller" title="Permalink to this headline">¶</a></h2>
+<p>This Module is the controller of the programm.
+The commands, whitch are defined in client.py will processed here
+and forwarded to the specific classes.</p>
+<p>Author: Christian Kemmerling</p>
 <dl class="py class">
 <dt id="controller.Controller">
 <em class="property">class </em><code class="sig-prename descclassname">controller.</code><code class="sig-name descname">Controller</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">confName</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller" title="Permalink to this definition">¶</a></dt>
@@ -190,7 +194,8 @@ the server for a route and print it as output.</p>
 <dl class="py method">
 <dt id="controller.Controller.config">
 <code class="sig-name descname">config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.config" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method handles the command line UI config options. It is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">config</span></code>.</p>
+<dd><p>This method handles the command line UI config options.
+It is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">config</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -208,7 +213,23 @@ the server for a route and print it as output.</p>
 <dl class="py method">
 <dt id="controller.Controller.route">
 <code class="sig-name descname">route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method calls the <code class="docutils literal notranslate"><span class="pre">route()</span></code> function from Network. This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span></code>.</p>
+<dd><p>This method calls the <code class="docutils literal notranslate"><span class="pre">askRoute()</span></code> function from Network.
+This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="controller.Controller.route_Handler">
+<code class="sig-name descname">route_Handler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em>, <em class="sig-param"><span class="n">values</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_Handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles actions, which all route commands do,
+like calling <code class="docutils literal notranslate"><span class="pre">Network.askRoute()</span></code> for getting the route,
+calling Output.routeFormat() to format the route
+and export the route.</p>
+<dl class="simple">
+<dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
+</dd>
+<dt>values: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></dt><dd><p>contains the values, which will be sendet to the server.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -222,7 +243,7 @@ the server for a route and print it as output.</p>
 <dd><p>This class handles all connections with the server.</p>
 <dl class="py method">
 <dt id="network.Network.askRoute">
-<code class="sig-name descname">askRoute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.askRoute" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">askRoute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">values</span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.askRoute" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method asks the server for a route and prints the gathered route as output.
 You can call this function by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span></code>.</p>
 </dd></dl>
@@ -280,7 +301,7 @@ It can be called with <code class="docutils literal notranslate"><span class="pr
 
 <dl class="py method">
 <dt id="output.Output.routeFormat">
-<code class="sig-name descname">routeFormat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.routeFormat" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">routeFormat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em>, <em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.routeFormat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Formats a given route.</p>
 </dd></dl>
 
