@@ -26,6 +26,6 @@ This documentation was written by Simon Sonntag, Ferus Nasiry and Christian Kemm
 Other programms related to this project
 =======================================
 
-* `Abfallkarte from Team A <https://github.com/Abfall-Karte/Abfallkarte>`_ (`Documentation <https://abfall-karte.github.io/>`_)
-* `Routenfinder_Client <https://github.com/Abfall-Karte/Routenfinder-Client>`_ (Documentation coming soon)
-* `Routenalgorithmus <https://github.com/Abfall-Karte/Routenalgorithmus>`_ (Documentation coming soon)
+* `Abfallkarte from Team A <https://github.com/Abfall-Karte/Abfallkarte>`_ (`Documentation <https://abfall-karte.github.io/master/index.html>`_)
+* `Routenfinder_Client <https://github.com/Abfall-Karte/Routenfinder-Client>`_ (`Documentation <https://abfall-karte.github.io/client/index.html>`_)
+* `Routenalgorithmus <https://github.com/Abfall-Karte/Routenalgorithmus>`_ (`Documentation <https://abfall-karte.github.io/algorithms/index.html>`_)
