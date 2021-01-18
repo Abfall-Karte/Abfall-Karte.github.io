@@ -1,0 +1,38 @@
+.. Routing algorithms documentation master file, created by
+   sphinx-quickstart on Mon Jan 18 17:36:28 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Routing Algorithms' documentation!
+==============================================
+
+This documentation page documents the source code of the "Routing Algorithm" repository.
+
+Description
+===========
+
+
+
+Classes
+=======
+.. toctree::
+   :maxdepth: 4
+   
+   classes
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+This documentation was written by Fabian Waldvogt.
+
+Other programms related to this project
+=======================================
+
+* `Abfallkarte from Team A <https://github.com/Abfall-Karte/Abfallkarte>`_ (`Documentation <https://abfall-karte.github.io/>`_)
+* `Routenfinder_Server <https://github.com/Abfall-Karte/Routenfinder-Server>`_ (Documentation coming soon)
+* `Routing Algorithms <https://github.com/Abfall-Karte/Routing_Algorithms>`_ (Documentation coming soon)
