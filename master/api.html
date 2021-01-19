@@ -257,11 +257,15 @@ Request filter options here: <a class="reference external" href="https://github.
 <code class="sig-name descname">id</code><a class="headerlink" href="#osm_data.Node.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
 The unique id of this node</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The id of the node is not unique. There will be several nodes with the same id but different attributes. Use <cite>subid</cite> for a unique id system</p>
+</div>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="osm_data.Node.long">
-<code class="sig-name descname">long</code><a class="headerlink" href="#osm_data.Node.long" title="Permalink to this definition">¶</a></dt>
+<dt id="osm_data.Node.lon">
+<code class="sig-name descname">lon</code><a class="headerlink" href="#osm_data.Node.lon" title="Permalink to this definition">¶</a></dt>
 <dd><p>long: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>
 The Longitude location of the Node</p>
 </dd></dl>
@@ -308,13 +312,6 @@ A second unique identifier which is set to <cite>None</cite> by Default. Request
 Returns the type of the Node</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="osm_data.Node.connected_ways">
-<em class="property">property </em><code class="sig-name descname">connected_ways</code><a class="headerlink" href="#osm_data.Node.connected_ways" title="Permalink to this definition">¶</a></dt>
-<dd><p>connected_ways: <code class="xref py py-class docutils literal notranslate"><span class="pre">list[Way]</span></code>
-All ways that this node is connected to</p>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -359,8 +356,8 @@ The node where this street ends</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="osm_data.Way.nodes">
-<code class="sig-name descname">nodes</code><a class="headerlink" href="#osm_data.Way.nodes" title="Permalink to this definition">¶</a></dt>
+<dt id="osm_data.Way.x__nodes">
+<code class="sig-name descname">x__nodes</code><a class="headerlink" href="#osm_data.Way.x__nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>nodes: <code class="xref py py-class docutils literal notranslate"><span class="pre">list[Node]</span></code>
 A list of all the nodes in the current street</p>
 </dd></dl>
