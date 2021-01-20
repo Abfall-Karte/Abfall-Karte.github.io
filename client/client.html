@@ -243,7 +243,7 @@ and export the route.</p>
 <dd><p>This class handles all connections with the server.</p>
 <dl class="py method">
 <dt id="network.Network.askRoute">
-<code class="sig-name descname">askRoute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">values</span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.askRoute" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">askRoute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">values</span></em>, <em class="sig-param"><span class="n">verbose</span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.askRoute" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method asks the server for a route and prints the gathered route as output.
 You can call this function by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span></code>.</p>
 </dd></dl>
@@ -280,7 +280,7 @@ It can be called with <code class="docutils literal notranslate"><span class="pr
 
 <dl class="py method">
 <dt id="filehandler.FileHandler.csvExport">
-<code class="sig-name descname">csvExport</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler.csvExport" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">csvExport</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fullPath</span></em><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler.csvExport" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exports the given text into a csv file</p>
 </dd></dl>
 
@@ -300,8 +300,8 @@ It can be called with <code class="docutils literal notranslate"><span class="pr
 </dd></dl>
 
 <dl class="py method">
-<dt id="output.Output.routeFormat">
-<code class="sig-name descname">routeFormat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em>, <em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.routeFormat" title="Permalink to this definition">¶</a></dt>
+<dt id="output.Output.route_format">
+<code class="sig-name descname">route_format</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em>, <em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">pathLen</span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.route_format" title="Permalink to this definition">¶</a></dt>
 <dd><p>Formats a given route.</p>
 </dd></dl>
 
