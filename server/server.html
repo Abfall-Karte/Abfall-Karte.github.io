@@ -86,8 +86,8 @@
               <p class="caption"><span class="caption-text">Overview:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Programm Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-server">Main Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-network">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main-class">Main Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#network">Network</a></li>
 </ul>
 </li>
 </ul>
@@ -161,69 +161,11 @@
 <h1>Programm Documentation<a class="headerlink" href="#programm-documentation" title="Permalink to this headline">¶</a></h1>
 <p>This is a command line application. You can call the main function with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">server.py</span></code>. In the following documentation this will be shortened to just <code class="docutils literal notranslate"><span class="pre">server.py</span></code>.
 Then a function in <code class="docutils literal notranslate"><span class="pre">Controller</span></code> is called, which handles the behavior. In the <code class="docutils literal notranslate"><span class="pre">Network</span></code> class everything network related is handled.</p>
-<div class="section" id="module-server">
-<span id="main-class"></span><h2>Main Class<a class="headerlink" href="#module-server" title="Permalink to this headline">¶</a></h2>
-<p>The main module of the Routenfinder-Server.</p>
-<dl class="py function">
-<dt id="server.main">
-<code class="sig-prename descclassname">server.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#server.main" title="Permalink to this definition">¶</a></dt>
-<dd><p>main method of the network server.py
-Calls the listen method in client.py so the serveris ready for connection.</p>
-</dd></dl>
-
+<div class="section" id="main-class">
+<h2>Main Class<a class="headerlink" href="#main-class" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-network">
-<span id="network"></span><h2>Network<a class="headerlink" href="#module-network" title="Permalink to this headline">¶</a></h2>
-<p>This Module contains a class with related network tasks.</p>
-<dl class="py class">
-<dt id="network.Network">
-<em class="property">class </em><code class="sig-prename descclassname">network.</code><code class="sig-name descname">Network</code><a class="headerlink" href="#network.Network" title="Permalink to this definition">¶</a></dt>
-<dd><p>This class contains methods related to networking tasks.</p>
-<dl class="py method">
-<dt id="network.Network.dict_to_string_formatter">
-<em class="property">static </em><code class="sig-name descname">dict_to_string_formatter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_dict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.dict_to_string_formatter" title="Permalink to this definition">¶</a></dt>
-<dd><p>formats the given data into a long string which can be sended.
-Each key of the dict will be started with following Key Value Pair:
-START_KEY,*KEYNAME*. All data will be seperated with semicolons.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="network.Network.listen">
-<code class="sig-name descname">listen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.listen" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method binds the server port and listens for input from the client
-It sends the messages beetween server and client and en- or decodes them.
-Also it closes the server-client connection.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="network.Network.ping">
-<em class="property">static </em><code class="sig-name descname">ping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.ping" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method returns a massage that confirms a successful ping.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="network.Network.route_neu">
-<code class="sig-name descname">route_neu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.route_neu" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function calls the routing Algorithms from
-the interface and <code class="docutils literal notranslate"><span class="pre">route</span></code>, <code class="docutils literal notranslate"><span class="pre">full_route</span></code> and <code class="docutils literal notranslate"><span class="pre">route_distance</span></code> as
-return values</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="network.Network.stop">
-<code class="sig-name descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.stop" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets stopsignal to true, so the server will be shutdown</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="network.Network.switcher">
-<code class="sig-name descname">switcher</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span></em>, <em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.switcher" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is a switcher method with returns the right method
-to the listen method.</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="network">
+<h2>Network<a class="headerlink" href="#network" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
