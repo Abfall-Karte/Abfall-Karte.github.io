@@ -1,109 +1,201 @@
+
+
+
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>API Reference</title> 
-  <!-- end extra head -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="_static/style.css" type="text/css" />
-  <link rel="stylesheet" href="_static/codeblocks.css" type="text/css" />
-  <link rel="stylesheet" href="_static/icons.css" type="text/css" />
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-  <script src="_static/jquery.js"></script>
-  <script src="_static/underscore.js"></script>
-  <script src="_static/doctools.js"></script>
-  <script src="_static/custom.js"></script>
-  <script src="_static/settings.js"></script>
-  <script src="_static/copy.js"></script>
-  <script src="_static/sidebar.js"></script>
-  <link rel="index" title="Index" href="genindex.html" />
-  <link rel="search" title="Search" href="search.html" />
-  <link rel="prev" title="Welcome to OSM DATA’s documentation!" href="index.html" />
+  
+  <title>API Reference &mdash; OSM DATA 0.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/jquery.fancybox.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/glpi.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="OSM DATA 0.2 documentation" href="index.html"/>
+        <link rel="prev" title="Welcome to OSM DATA’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
-<body>
-  <div class="main-grid">
-    <header class="grid-item">
-      <nav>
-        <a href="index.html" class="main-heading">OSM DATA</a>
-        <a href="https://github.com/Abfall-Karte/Abfallkarte" title="GitHub"><span class="material-icons custom-icons">github</span></a>
-        <a onclick="mobileSearch.open();" title="Search" id="open-search" class="mobile-only"><span class="material-icons">search</span></a>
-        <a onclick="mobileSearch.close();" title="Close" id="close-search" class="mobile-only" hidden><span class="material-icons">close</span></a>
-      </nav>
-      <nav class="mobile-only">
-        <form role="search" class="search" action="search.html" method="get">
-          <div class="search-wrapper">
-            <input type="search" name="q" placeholder="Search documentation" />
-            <button type="submit">
-              <span class="material-icons">search</span>
-            </button>
-          </div>
-        </form>
-      </nav>
-    </header>
-    <div class="sub-header grid-item">
-      <label for="documentation_select">View Documentation For</label>
-      <select id="documentation_select" onchange="window.location = this.value;">
-        <option value="#" selected>osm_data</option>
-      </select>
-      <form role="search" class="search" action="search.html" method="get">
-        <div class="search-wrapper">
-          <input type="search" name="q" placeholder="Search documentation" />
-          <button type="submit">
-            <span class="material-icons">search</span>
-          </button>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OSM DATA
+          
+
+          
+          </a>
+
+          
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
         </div>
-      </form>
-      <a accesskey="S" class="settings" onclick="settingsModal.open();"><span class="material-icons">settings</span></a>
-    </div>
-    <aside class="grid-item">
-      <span id="hamburger-toggle">
-        <span class="material-icons">menu</span>
-      </span>
-      <span id="settings-toggle" class="settings" onclick="settingsModal.open();">
-        <span class="material-icons">settings</span>
-      </span>
-      <div id="sidebar">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">API Reference</a><ul>
-<li><a class="reference internal" href="#osm-data">OSM Data</a></li>
-<li><a class="reference internal" href="#node">Node</a></li>
-<li><a class="reference internal" href="#way">Way</a></li>
-<li><a class="reference internal" href="#nodetype">NodeType</a></li>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#osm-data">OSM Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#node">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#way">Way</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nodetype">NodeType</a></li>
 </ul>
 </li>
 </ul>
 
+            
+          
+        </div>
       </div>
-    </aside>
-    <main class="grid-item" role="main">
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
       
-  <section id="api-reference">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OSM DATA</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to OSM DATA’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-reference">
 <h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
 <p>The following section outlines the API of the data downloaded from OSM</p>
-<section id="osm-data">
+<div class="section" id="osm-data">
 <h2>OSM Data<a class="headerlink" href="#osm-data" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="osm_data.OSM_data">
 <em class="property">class </em><code class="sig-prename descclassname">osm_data.</code><code class="sig-name descname">OSM_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">loggin_level</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">20</span></em>, <em class="sig-param"><span class="n">skip_update</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">first_node_has_trash</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osm_data.OSM_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents the OSM Data in an easy to access format
-You can access the data with .ways (and if needed with ._nodes)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>logging_level</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Sets the logging level used by the logging module
-Defaults to <cite>INFO</cite></p></li>
-<li><p><strong>skip_update</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – <p>Defines if the update check should be skipped
+You can access the data with .ways (and if needed with ._nodes)
+<span class="raw-html"><br /></span></p>
+<p><span class="raw-html"><spacer /></span></p>
+<dl>
+<dt>logging_level: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></dt><dd><p>Sets the logging level used by the logging module <span class="raw-html"><br /></span>
+Defaults to <cite>INFO</cite></p>
+</dd>
+<dt>skip_update: <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></dt><dd><p>Defines if the update check should be skipped <span class="raw-html"><br /></span>
 Defaults to <cite>False</cite></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please check for updates manually regularly if you disable autoupdate</p>
 </div>
-</p></li>
-<li><p><strong>first_node_has_trash</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Defines if starting node should always have a trash container
-Defaults to <cite>False</cite></p></li>
-</ul>
+</dd>
+<dt>first_node_has_trash: <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></dt><dd><p>Defines if starting node should always have a trash container
+Defaults to <cite>False</cite></p>
+</dd>
+<dt>data_file: <code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></dt><dd><p>The Name of the datafile that should be used
+Defaults to <cite>data.lposm</cite></p>
 </dd>
 </dl>
 <dl class="py attribute">
@@ -116,119 +208,54 @@ The logger used by the OSM module</p>
 </div>
 </dd></dl>
 
-<dl class="py attribute">
-<dt id="osm_data.OSM_data.ways">
-<code class="sig-name descname">ways</code><a class="headerlink" href="#osm_data.OSM_data.ways" title="Permalink to this definition">¶</a></dt>
-<dd><p>ways <code class="xref py py-class docutils literal notranslate"><span class="pre">list[ways]</span></code>
-A List of all ways in the current dataset. This includes ways not connected to the main dataset.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="osm_data.OSM_data.blacklisted_ways_ids">
-<code class="sig-name descname">blacklisted_ways_ids</code><a class="headerlink" href="#osm_data.OSM_data.blacklisted_ways_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>blacklisted_ways_ids <code class="xref py py-class docutils literal notranslate"><span class="pre">list[int]</span></code>
-A list of all ways that nodes won’t return when asked for connected ways</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="osm_data.OSM_data.route_set">
-<code class="sig-name descname">route_set</code><a class="headerlink" href="#osm_data.OSM_data.route_set" title="Permalink to this definition">¶</a></dt>
-<dd><p>route_set <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>
-Defines if visualize has a route to show</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="osm_data.OSM_data.route">
-<code class="sig-name descname">route</code><a class="headerlink" href="#osm_data.OSM_data.route" title="Permalink to this definition">¶</a></dt>
-<dd><p>route <code class="xref py py-class docutils literal notranslate"><span class="pre">list[Node]</span></code>
-A list of all nodes that make a Route</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="osm_data.OSM_data.route_trash">
-<code class="sig-name descname">route_trash</code><a class="headerlink" href="#osm_data.OSM_data.route_trash" title="Permalink to this definition">¶</a></dt>
-<dd><p>route_trash <code class="xref py py-class docutils literal notranslate"><span class="pre">list[Node]</span></code>
-A list of all Trash nodes on the Route</p>
-</dd></dl>
-
 <dl class="py method">
 <dt id="osm_data.OSM_data.filtered_nodes">
 <code class="sig-name descname">filtered_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osm_data.OSM_data.filtered_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a list of <a class="reference internal" href="#osm_data.Node" title="osm_data.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a> that are filtered based on the given Parameter</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>filter</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – <p>Sets the current parameters that should be filtered out</p>
+<dl>
+<dt>filter: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></dt><dd><p>Sets the current parameters that should be filtered out
+<span class="raw-html"><spacer /></span></p>
 <div class="helpful admonition">
 <p class="admonition-title">Parameter Options</p>
-<p><cite>”used”</cite> - Return only nodes that have at least one way connected <span class="raw-html"><br /></span>
-<cite>“trash”</cite> - Return only nodes that have trash and at least one way connected</p>
+<p><cite>used</cite> - Return only nodes that have at least one way connected <span class="raw-html"><br /></span>
+<cite>trash</cite> - Return only nodes that have trash and at least one way connected</p>
 </div>
-</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>NotImplementedError</strong> – You gave an invalid filter option <span class="raw-html"><br /></span>
-    Request filter options here: <a class="reference external" href="https://github.com/Abfall-Karte/Abfallkarte/issues">https://github.com/Abfall-Karte/Abfallkarte/issues</a></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>List[<a class="reference internal" href="#osm_data.Node" title="osm_data.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a>]</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="osm_data.OSM_data.visualize">
-<code class="sig-name descname">visualize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">route</span><span class="p">:</span> <span class="n">list</span> <span class="o">=</span> <span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">route_trash</span><span class="p">:</span> <span class="n">list</span> <span class="o">=</span> <span class="default_value">[]</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#osm_data.OSM_data.visualize" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a visualisation of the current dataset and displays it</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>rout</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list[Node]</span></code>) – The lists of nodes forming the way that should be displayed</p></li>
-<li><p><strong>route_trash</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list[Node]</span></code>) – A list of Nodes that contain trash and should be marked accordingly. Needs to contain at least one Node</p></li>
-</ul>
+<dl class="simple">
+<dt>NotImplementedError</dt><dd><p>You gave an invalid filter option <span class="raw-html"><br /></span>
+Request filter options here: <a class="reference external" href="https://github.com/Abfall-Karte/Abfallkarte/issues">https://github.com/Abfall-Karte/Abfallkarte/issues</a></p>
 </dd>
 </dl>
+<p>List[<a class="reference internal" href="#osm_data.Node" title="osm_data.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a>]</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="osm_data.OSM_data.updated_dataset">
-<em class="property">property </em><code class="sig-name descname">updated_dataset</code><a class="headerlink" href="#osm_data.OSM_data.updated_dataset" title="Permalink to this definition">¶</a></dt>
-<dd><p>updated_dataset <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>
-Defines if the dataset was updated. Must be manually set to false</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="osm_data.OSM_data.update_dataset">
-<code class="sig-name descname">update_dataset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osm_data.OSM_data.update_dataset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Updates the OSM Dataset</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The update process will take some time depending on your machine (at least 15 Minutes)
-It is strongly encouraged to run this with PyPy instead of CPython to reduce runtime</p>
 </div>
-</dd></dl>
-
-</dd></dl>
-
-</section>
-<section id="node">
+<div class="section" id="node">
 <h2>Node<a class="headerlink" href="#node" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="osm_data.Node">
 <em class="property">class </em><code class="sig-prename descclassname">osm_data.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">lat</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">long</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">trash</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="p">:</span> <span class="n">tuple</span> <span class="o">=</span> <span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osm_data.Node" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents the Node in the OSM data set</p>
-<p>:param <span class="raw-html"><spacer /></span>:
-:param id <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>: The id of the Node
-:param lat <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>: The Longitude location of the Node
-:param lon <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>: The Latitude Location of the Node
-:param trash <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>: Defines the if the current node has a Trash container
-:param attributes <code class="xref py py-class docutils literal notranslate"><span class="pre">tulpe</span></code>: The attributes of the Node</p>
+<p><span class="raw-html"><spacer /></span></p>
+<dl class="simple">
+<dt>id: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></dt><dd><p>The id of the Node</p>
+</dd>
+<dt>lat: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></dt><dd><p>The Longitude location of the Node</p>
+</dd>
+<dt>lon: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></dt><dd><p>The Latitude Location of the Node</p>
+</dd>
+<dt>trash: <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></dt><dd><p>Defines the if the current node has a Trash container</p>
+</dd>
+<dt>attributes: <code class="xref py py-class docutils literal notranslate"><span class="pre">tulpe</span></code></dt><dd><p>The attributes of the Node</p>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt id="osm_data.Node.id">
 <code class="sig-name descname">id</code><a class="headerlink" href="#osm_data.Node.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
+<dd><p>id: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
 The unique id of this node</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -239,193 +266,134 @@ The unique id of this node</p>
 <dl class="py attribute">
 <dt id="osm_data.Node.lon">
 <code class="sig-name descname">lon</code><a class="headerlink" href="#osm_data.Node.lon" title="Permalink to this definition">¶</a></dt>
-<dd><p>lon <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>
+<dd><p>long: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>
 The Longitude location of the Node</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="osm_data.Node.lat">
 <code class="sig-name descname">lat</code><a class="headerlink" href="#osm_data.Node.lat" title="Permalink to this definition">¶</a></dt>
-<dd><p>lat <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>
+<dd><p>lat: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>
 The Latitude Location of the Node</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="osm_data.Node.trash">
 <code class="sig-name descname">trash</code><a class="headerlink" href="#osm_data.Node.trash" title="Permalink to this definition">¶</a></dt>
-<dd><p>trash <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>
+<dd><p>trash: <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>
 Defines if this Node has a Trash container</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="osm_data.Node.attributes">
 <code class="sig-name descname">attributes</code><a class="headerlink" href="#osm_data.Node.attributes" title="Permalink to this definition">¶</a></dt>
-<dd><p>attributes <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>
+<dd><p>attributes: <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>
 All attributes. Usually not important</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="osm_data.Node.parent">
 <code class="sig-name descname">parent</code><a class="headerlink" href="#osm_data.Node.parent" title="Permalink to this definition">¶</a></dt>
-<dd><p>parent <code class="xref py py-class docutils literal notranslate"><span class="pre">osm_data</span></code>
+<dd><p>parent: <code class="xref py py-class docutils literal notranslate"><span class="pre">osm_data</span></code>
 <strong>For internal use only</strong> The parent that has all the ways. Used to reference the ways</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="osm_data.Node.subid">
 <code class="sig-name descname">subid</code><a class="headerlink" href="#osm_data.Node.subid" title="Permalink to this definition">¶</a></dt>
-<dd><p>subid <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
+<dd><p>subid: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
 A second unique identifier which is set to <cite>None</cite> by Default. Requested</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="osm_data.Node.type">
 <em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#osm_data.Node.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>type <a class="reference internal" href="#osm_data.NodeType" title="osm_data.NodeType"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeType</span></code></a>
+<dd><p>type: <a class="reference internal" href="#osm_data.NodeType" title="osm_data.NodeType"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeType</span></code></a>
 Returns the type of the Node</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="osm_data.Node.ways">
-<em class="property">property </em><code class="sig-name descname">ways</code><a class="headerlink" href="#osm_data.Node.ways" title="Permalink to this definition">¶</a></dt>
-<dd><p>ways <code class="xref py py-class docutils literal notranslate"><span class="pre">list[Way]</span></code>
-A list of all Ways that the Node is connected to</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="osm_data.Node.connected_ways">
-<em class="property">property </em><code class="sig-name descname">connected_ways</code><a class="headerlink" href="#osm_data.Node.connected_ways" title="Permalink to this definition">¶</a></dt>
-<dd><p>connected_ways <code class="xref py py-class docutils literal notranslate"><span class="pre">list[Way]</span></code>
-Alias for <cite>ways</cite></p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="osm_data.Node.long">
-<em class="property">property </em><code class="sig-name descname">long</code><a class="headerlink" href="#osm_data.Node.long" title="Permalink to this definition">¶</a></dt>
-<dd><p>long <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>
-Alias for lon</p>
-</dd></dl>
-
-</dd></dl>
-
-</section>
-<section id="way">
+</div>
+<div class="section" id="way">
 <h2>Way<a class="headerlink" href="#way" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="osm_data.Way">
 <em class="property">class </em><code class="sig-prename descclassname">osm_data.</code><code class="sig-name descname">Way</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">nodes</span><span class="p">:</span> <span class="n">list</span> <span class="o">=</span> <span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">length</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">maxspeed</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="p">:</span> <span class="n">tuple</span> <span class="o">=</span> <span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osm_data.Way" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents the Way in the OSM data set</p>
-<p>:param <span class="raw-html"><spacer /></span>:
-:param name: Defines the name of the Way
-:type name: <code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code>
-:param id: Defines the unique id of the Way
-:type id: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
-:param nodes: A list of all Nodes that make the Way
-:type nodes: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
-:param length: The length of the way (unitless)
-:type length: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>
-:param maxspeed: Defines the max speed on the way
-:type maxspeed: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+<p><span class="raw-html"><spacer /></span></p>
+<dl class="simple">
+<dt>name: <code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></dt><dd><p>Defines the name of the Way</p>
+</dd>
+<dt>id: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></dt><dd><p>Defines the unique id of the Way</p>
+</dd>
+<dt>nodes: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></dt><dd><p>A list of all Nodes that make the Way</p>
+</dd>
+<dt>length: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></dt><dd><p>The length of the way (unitless)</p>
+</dd>
+<dt>maxspeed: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></dt><dd><p>Defines the max speed on the way</p>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt id="osm_data.Way.name">
 <code class="sig-name descname">name</code><a class="headerlink" href="#osm_data.Way.name" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code>
+<dd><p>name: <code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code>
 The streetname</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>name</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="osm_data.Way.id">
 <code class="sig-name descname">id</code><a class="headerlink" href="#osm_data.Way.id" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
+<dd><p>id: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
 Defines the unique id of the Way</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>id</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="osm_data.Way.length">
 <code class="sig-name descname">length</code><a class="headerlink" href="#osm_data.Way.length" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
+<dd><p>length: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
 The node where this street ends</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>length</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="osm_data.Way.x__nodes">
 <code class="sig-name descname">x__nodes</code><a class="headerlink" href="#osm_data.Way.x__nodes" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">list[Node]</span></code>
+<dd><p>nodes: <code class="xref py py-class docutils literal notranslate"><span class="pre">list[Node]</span></code>
 A list of all the nodes in the current street</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>nodes</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="osm_data.Way.speed">
 <code class="sig-name descname">speed</code><a class="headerlink" href="#osm_data.Way.speed" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
+<dd><p>speed: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
 The maximum allowed speed on this street</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>speed</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="osm_data.Way.weight">
 <em class="property">property </em><code class="sig-name descname">weight</code><a class="headerlink" href="#osm_data.Way.weight" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>
+<dd><p>weight: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>
 The weight of the way</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>weight</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="osm_data.Way.start">
 <em class="property">property </em><code class="sig-name descname">start</code><a class="headerlink" href="#osm_data.Way.start" title="Permalink to this definition">¶</a></dt>
-<dd><p><a class="reference internal" href="#osm_data.Node" title="osm_data.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a>
+<dd><p>start: <a class="reference internal" href="#osm_data.Node" title="osm_data.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a>
 The node where this street starts</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>start</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="osm_data.Way.end">
 <em class="property">property </em><code class="sig-name descname">end</code><a class="headerlink" href="#osm_data.Way.end" title="Permalink to this definition">¶</a></dt>
-<dd><p><a class="reference internal" href="#osm_data.Node" title="osm_data.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a>
+<dd><p>end: <a class="reference internal" href="#osm_data.Node" title="osm_data.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a>
 The node where this street ends</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>end</p>
-</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>
 
-</section>
-<section id="nodetype">
+</div>
+<div class="section" id="nodetype">
 <h2>NodeType<a class="headerlink" href="#nodetype" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="osm_data.NodeType">
@@ -457,63 +425,84 @@ The node where this street ends</p>
 
 </dd></dl>
 
-</section>
-</section>
+</div>
+</div>
 
 
-    </main>
-    <footer class="grid-item">
-        &#169; Copyright 2021, Leon Pawlick.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0+.
-    </footer>
-  </div>
-
-  <div id="settings" class="modal" onclick="if (event.target == this){ settingsModal.close(); }" hidden>
-    <div class="modal-content">
-      <span class="close" onclick="settingsModal.close();" title="Close">
-        <span class="material-icons">close</span>
-      </span>
-      <h1>Settings</h1>
-
-      <h2>Font</h2>
-      <div class="setting">
-        <h3>Use a serif font:
-          <label class="toggle"
-            title="Use a serif font? Your system font will be used, falling back to serif.">
-            <input type="checkbox" name="useSerifFont" onclick="updateSetting(this);">
-            <span class="toggle-slider"></span>
-          </label>
-        </h3>
-      </div>
-
-      <h2>Theme</h2>
-      <div class="setting">
-        <h3>
-          <label class="toggle" title="Set your theme based on your system preferences">
-            <input type="radio" name="setTheme" onclick="updateSetting(this);" value="automatic" checked>
-          </label>
-          Automatic
-        </h3>
-        <h3>
-          <label class="toggle" title="Set your theme to light theme">
-            <input type="radio" name="setTheme" onclick="updateSetting(this);" value="light">
-          </label>
-          Light
-        </h3>
-        <h3>
-          <label class="toggle" title="Set your theme to dark theme">
-            <input type="radio" name="setTheme" onclick="updateSetting(this);" value="dark">
-          </label>
-          Dark
-        </h3>
-      </div>
-
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to OSM DATA’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
-  </div>
+  
 
-  <div id="to-top" onclick="scrollToTop()" hidden>
-    <span><span class="material-icons">arrow_upward</span> to top</span>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Leon Pawlick.
+
+    </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.2',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/jquery.fancybox.min.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+  <script type="text/javascript">
+    $(function(){
+      $('.image-reference').fancybox();
+    })
+  </script>
 
 </body>
 </html>
