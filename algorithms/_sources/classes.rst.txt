@@ -1,9 +1,73 @@
-.. currentmodule:: routenfinder_client
+.. currentmodule:: Routing_Algorithms
 
-random title
-=============
+DataImport
+=======================
 
 .. automodule:: dataImport
 	:members:
 	
-	.. automethod:: __init__
+	
+	
+
+DataConverter
+=======================
+
+.. automodule:: dataConverter
+	:members:
+	
+	
+	
+	
+RoutingAlgorithm
+=======================
+
+.. automodule:: routingAlgorithm
+	:members:
+	
+	
+	
+AlgorithmManager
+=======================
+
+.. automodule:: algorithmManager
+	:members:
+	
+	
+
+NearestNeighbour
+=======================
+
+.. automodule:: nearestNeighbour
+	:members:
+	
+	
+	
+SimulatedAnnealing
+=======================
+
+.. automodule:: simulatedAnnealing
+	:members:
+	
+	
+	
+GeneticAlgorithm
+=======================
+
+.. automodule:: geneticAlgorithm
+	:members:
+	
+	
+Optimizer
+=======================
+
+.. automodule:: optimizer
+	:members:
+	
+	
+SummationInsertion
+=======================
+
+.. automodule:: summationInsertion
+	:members:
+	
+	
