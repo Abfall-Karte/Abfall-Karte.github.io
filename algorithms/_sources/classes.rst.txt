@@ -18,18 +18,18 @@ DataConverter
 	
 	
 	
-RoutingAlgorithm
-=======================
-
-.. automodule:: routingAlgorithm
-	:members:
-	
-	
-	
 AlgorithmManager
 =======================
 
 .. automodule:: algorithmManager
+	:members:
+	
+	
+	
+RoutingAlgorithm
+=======================
+
+.. automodule:: routingAlgorithm
 	:members:
 	
 	

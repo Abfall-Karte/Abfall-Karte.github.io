@@ -86,8 +86,8 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">DataImport</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#module-dataConverter">DataConverter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#routingalgorithm">RoutingAlgorithm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#algorithmmanager">AlgorithmManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#routingalgorithm">RoutingAlgorithm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#nearestneighbour">NearestNeighbour</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#simulatedannealing">SimulatedAnnealing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#geneticalgorithm">GeneticAlgorithm</a></li>
@@ -164,9 +164,13 @@
 <span id="dataimport"></span><h1>DataImport<a class="headerlink" href="#module-dataImport" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="dataImport.DataImport">
-<em class="property">class </em><code class="sig-prename descclassname">dataImport.</code><code class="sig-name descname">DataImport</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">realData</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">nodeAmount</span><span class="o">=</span><span class="default_value">1691</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataImport.DataImport" title="Permalink to this definition">¶</a></dt>
-<dd><p>::author of class:: Fabian Waldvogt
-This class handles the import of the real world data through the given api</p>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">dataImport.</span></code><code class="sig-name descname"><span class="pre">DataImport</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realData</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeAmount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1695</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataImport.DataImport" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Author of class</dt>
+<dd class="field-odd"><p>Fabian Waldvogt</p>
+</dd>
+</dl>
+<p>This class handles the import of the real world data through the given api</p>
 <dl class="field-list">
 <dt class="field-odd">Member</dt>
 <dd class="field-odd"><p>osmData: <code class="xref py py-class docutils literal notranslate"><span class="pre">OSM_Data</span></code> Object which loads/generates the OSM data</p>
@@ -177,7 +181,7 @@ This class handles the import of the real world data through the given api</p>
 </dl>
 <dl class="py method">
 <dt id="dataImport.DataImport.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">realData</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">nodeAmount</span><span class="o">=</span><span class="default_value">1691</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataImport.DataImport.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realData</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeAmount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1695</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataImport.DataImport.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method initializes the class <cite>dataImport</cite> and sets its attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -193,35 +197,35 @@ This class handles the import of the real world data through the given api</p>
 
 <dl class="py method">
 <dt id="dataImport.DataImport.getData">
-<code class="sig-name descname">getData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataImport.DataImport.getData" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">getData</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataImport.DataImport.getData" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method returns two lists: a list of all nodes which trash attribute is set to true and a list of all nodes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Returns two lists of several <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code> instances : self.CONST_ALLTRASHNODES ,self.CONST_ALLNODES</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><cite>list</cite></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="dataImport.DataImport.realDataUsed">
-<code class="sig-name descname">realDataUsed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataImport.DataImport.realDataUsed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">realDataUsed</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataImport.DataImport.realDataUsed" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method returns a bool which is ‘true’ if real data ist used and false if atrtificially generated is used</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Returns a bool</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><cite>bool</cite></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="dataImport.DataImport.testRealData">
-<code class="sig-name descname">testRealData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataImport.DataImport.testRealData" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">testRealData</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataImport.DataImport.testRealData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tests if there are any faults in the data set, like missing refrences or nodes with no ways</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -232,14 +236,14 @@ This class handles the import of the real world data through the given api</p>
 
 <dl class="py method">
 <dt id="dataImport.DataImport.wasUpdated">
-<code class="sig-name descname">wasUpdated</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataImport.DataImport.wasUpdated" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">wasUpdated</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataImport.DataImport.wasUpdated" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method returns a bool which is ‘true’ if the dataset in osmData has been updated else ‘false’</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Returns a bool</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><cite>bool</cite></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -251,7 +255,7 @@ This class handles the import of the real world data through the given api</p>
 <span id="dataconverter"></span><h1>DataConverter<a class="headerlink" href="#module-dataConverter" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="dataConverter.DataConverter">
-<em class="property">class </em><code class="sig-prename descclassname">dataConverter.</code><code class="sig-name descname">DataConverter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataImport</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">dataConverter.</span></code><code class="sig-name descname"><span class="pre">DataConverter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataImport</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Author of class</dt>
 <dd class="field-odd"><p>Fabian Waldvogt</p>
@@ -269,29 +273,42 @@ This class handles the import of the real world data through the given api</p>
 </dl>
 <dl class="py method">
 <dt id="dataConverter.DataConverter.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataImport</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method initializes the class DataConverter and either constructs a new datastructue or loads an old one(if there were no updates)</p>
+<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataImport</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method initializes the class DataConverter and either constructs a new datastructue or loads an old one(if there were no updates).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p>dataImport: <code class="xref py py-class docutils literal notranslate"><span class="pre">DataImport</span></code> Instance of DataImport which provides the initial node lists</p>
+<dd class="field-odd"><dl class="simple">
+<dt>dataImport: <code class="xref py py-class docutils literal notranslate"><span class="pre">DataImport</span></code> </dt><dd><p>Instance of DataImport which provides the initial node lists</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
+<dt id="dataConverter.DataConverter.compareShortestPathsResults">
+<code class="sig-name descname"><span class="pre">compareShortestPathsResults</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.compareShortestPathsResults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests if both implementations of dijkstra’s algorithm return the same result, test if they are working correctly</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="dataConverter.DataConverter.getRoutingData">
-<code class="sig-name descname">getRoutingData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.getRoutingData" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns all the needed data for the algorithms
-:return: self.CONST_ROUTINGDATA <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>, self.CONST_PREVIOUSNODESDATA <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>, self.CONST_ALLTRASHNODES <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>, self.CONST_ALLNODES <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
+<code class="sig-name descname"><span class="pre">getRoutingData</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.getRoutingData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all the needed data for the algorithms</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self.CONST_ROUTINGDATA <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> | self.CONST_PREVIOUSNODESDATA <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> | self.CONST_ALLTRASHNODES <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code> | self.CONST_ALLNODES <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="dataConverter.DataConverter.loadData">
-<code class="sig-name descname">loadData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.loadData" title="Permalink to this definition">¶</a></dt>
-<dd><p>Loading the data structure from .pickle files</p>
+<code class="sig-name descname"><span class="pre">loadData</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.loadData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loading the data structure from .pickle files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>nodeDict: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> Matrix (dict&lt;dict&gt;) that holds all distances from each trash nodes to the others, 
+<dd class="field-odd"><p>nodeDict: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> Matrix (dict&lt;dict&gt;) that holds all distances from each trash nodes to the others |
 previousNodesDict: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> Matrix (dict&lt;dict&gt;) that hold all previous nodes for ever trash node</p>
 </dd>
 </dl>
@@ -299,53 +316,76 @@ previousNodesDict: <code class="xref py py-class docutils literal notranslate"><
 
 <dl class="py method">
 <dt id="dataConverter.DataConverter.saveData">
-<code class="sig-name descname">saveData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nodeDict</span></em>, <em class="sig-param"><span class="n">previousNodesDict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.saveData" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write the dictonares to .pickle files</p>
+<code class="sig-name descname"><span class="pre">saveData</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodeDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">previousNodesDict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.saveData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the given dictonares(distance matrix, previous nodes matrix) to .pickle files.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p>nodeDict: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> Matrix (dict&lt;dict&gt;) that holds all distances from each trash nodes to the others</p>
+<dd class="field-odd"><blockquote>
+<div><dl class="simple">
+<dt>nodeDict: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> </dt><dd><p>Matrix (dict&lt;dict&gt;) that holds all distances from each trash nodes to the others</p>
+</dd>
+</dl>
+</div></blockquote>
 <p>previousNodesDict: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> Matrix (dict&lt;dict&gt;) that hold all previous nodes for ever trash node</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
+<dt id="dataConverter.DataConverter.shortestPathsTimes">
+<code class="sig-name descname"><span class="pre">shortestPathsTimes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeBHeap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeList</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.shortestPathsTimes" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method measures the time that the two implementations of djikstra’s algorithm need to compare them.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="dataConverter.DataConverter.singleSourceShortestPathsBinaryHeap">
-<code class="sig-name descname">singleSourceShortestPathsBinaryHeap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.singleSourceShortestPathsBinaryHeap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Executes dijkstra’s single soure shortest path with the source as start node with a heap dictonary, that is used as a priority queue, as the underlying data strucutre</p>
+<code class="sig-name descname"><span class="pre">singleSourceShortestPathsBinaryHeap</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.singleSourceShortestPathsBinaryHeap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes dijkstra’s single soure shortest path with the source as start node with a heap dictonary, that is used as a priority queue, as the underlying data structure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p>source: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code> The starting node from which dijkstra’s algorithm will begin</p>
+<dd class="field-odd"><dl class="simple">
+<dt>source: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code> </dt><dd><p>The starting node from which dijkstra’s algorithm will begin</p>
+</dd>
+</dl>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>distances <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> , previousNode <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> , source <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+<dd class="field-even"><p>distances <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> | previousNode <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> | source <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="dataConverter.DataConverter.singleSourceShortestPathsWList">
-<code class="sig-name descname">singleSourceShortestPathsWList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.singleSourceShortestPathsWList" title="Permalink to this definition">¶</a></dt>
-<dd><p>Executes dijkstra’s single soure shortest path with the source as start node with a list as the underlying data strucutre</p>
+<code class="sig-name descname"><span class="pre">singleSourceShortestPathsWList</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.singleSourceShortestPathsWList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes dijkstra’s single soure shortest path with the source as start node with a list as the underlying data structure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p>source: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code> The starting node from which dijkstra’s algorithm will begin</p>
+<dd class="field-odd"><dl class="simple">
+<dt>source: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code> </dt><dd><p>The starting node from which dijkstra’s algorithm will begin</p>
+</dd>
+</dl>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>distances <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> , previousNode <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> , source <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+<dd class="field-even"><p>distances <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> | previousNode <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> | source <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
+<dt id="dataConverter.DataConverter.testSaveLoadData">
+<code class="sig-name descname"><span class="pre">testSaveLoadData</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.testSaveLoadData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if the data in the pickle files has correctly been read and if the indices have correctly been replaced</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="dataConverter.DataConverter.transformData">
-<code class="sig-name descname">transformData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.transformData" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">transformData</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dataConverter.DataConverter.transformData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates the new data structure:
 Executes dijkstra’s single soure shortest path for all trash nodes in CONST_ALLTRASHNODES and saves the returned dictonaries in the dictonaries self.CONST_ROUTINGDATA, self.CONST_PREVIOUSNODESDATA with the current node as key
-then saves the data to pickle files and returns the new data structures</p>
+then saves the data to pickle files and returns the new data structures.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>distancesDict &lt;-&gt; self.CONST_ROUTINGDATA <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>, previousNodesDict &lt;-&gt; self.CONST_PREVIOUSNODESDATA <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+<dd class="field-odd"><p>distancesDict &lt;-&gt; self.CONST_ROUTINGDATA <code class="xref py py-class docutils literal notranslate"><span class="pre">dict`|</span> <span class="pre">previousNodesDict</span> <span class="pre">&lt;-&gt;</span> <span class="pre">self.CONST_PREVIOUSNODESDATA</span> <span class="pre">:class:`dict</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -353,11 +393,11 @@ then saves the data to pickle files and returns the new data structures</p>
 </dd></dl>
 
 </div>
-<div class="section" id="routingalgorithm">
-<h1>RoutingAlgorithm<a class="headerlink" href="#routingalgorithm" title="Permalink to this headline">¶</a></h1>
-</div>
 <div class="section" id="algorithmmanager">
 <h1>AlgorithmManager<a class="headerlink" href="#algorithmmanager" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="routingalgorithm">
+<h1>RoutingAlgorithm<a class="headerlink" href="#routingalgorithm" title="Permalink to this headline">¶</a></h1>
 </div>
 <div class="section" id="nearestneighbour">
 <h1>NearestNeighbour<a class="headerlink" href="#nearestneighbour" title="Permalink to this headline">¶</a></h1>
