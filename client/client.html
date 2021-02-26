@@ -227,14 +227,14 @@ It is called by the subcommand <code class="docutils literal notranslate"><span 
 <dt id="controller.Controller.route">
 <code class="sig-name descname"><span class="pre">route</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span></code>.
-Sets values to: route;default</p>
+Sets values to: <cite>route;default</cite></p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.route_custom">
 <code class="sig-name descname"><span class="pre">route_custom</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_custom" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">custom</span></code> .
-Sets values to: route;custom;customalgoname
+Sets values to: <code class="docutils literal notranslate"><span class="pre">route;custom;customalgoname</span></code>
 The third value is the name of an algo which didn’t has it own command.</p>
 </dd></dl>
 
@@ -249,7 +249,7 @@ Sets values to: route;fast</p>
 <dt id="controller.Controller.route_ga">
 <code class="sig-name descname"><span class="pre">route_ga</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_ga" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the genetic algorithm and it’s called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">ga</span></code>.
-Sets values to: route;ga; The third value is set to improvenn or None</p>
+Sets values to: <code class="docutils literal notranslate"><span class="pre">route;ga;USE</span></code> The third value is set to improvenn or None</p>
 </dd></dl>
 
 <dl class="py method">
@@ -257,7 +257,7 @@ Sets values to: route;ga; The third value is set to improvenn or None</p>
 <code class="sig-name descname"><span class="pre">route_greedy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_greedy" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the Nearest Neighbour Algorithm.
 This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">greedy</span></code>.
-Sets values to: route;greedy; The third value is set to twoopt, threeopt, growingpathopt or None</p>
+Sets values to: <code class="docutils literal notranslate"><span class="pre">route;greedy;USE</span></code> The third value is set to twoopt, threeopt, growingpathopt or None</p>
 </dd></dl>
 
 <dl class="py method">
@@ -280,14 +280,14 @@ This Method is called by every other route function.</p>
 <dt id="controller.Controller.route_sa">
 <code class="sig-name descname"><span class="pre">route_sa</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_sa" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the method for the Simulated Annealing algorithm and it’s called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">sa</span></code>.
-Sets values to: route;sa; The thirs value is set to improvenn, improvega or None</p>
+Sets values to: <code class="docutils literal notranslate"><span class="pre">route;sa;USE</span></code> The third value is set to improvenn, improvega or None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.route_safe">
 <code class="sig-name descname"><span class="pre">route_safe</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_safe" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">safe</span></code>.
-Sets values to: route;safe</p>
+Sets values to: <code class="docutils literal notranslate"><span class="pre">route;safe</span></code></p>
 </dd></dl>
 
 <dl class="py method">
