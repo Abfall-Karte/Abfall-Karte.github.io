@@ -91,6 +91,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-network">Network</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-filehandler">FileHandler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-output">Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gpx">GPX</a></li>
 </ul>
 </li>
 </ul>
@@ -165,9 +166,10 @@
 <p>This is a command line application. You can call the main function with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">client.py</span></code>. In the following documentation this will be shortened to just <code class="docutils literal notranslate"><span class="pre">client.py</span></code>. Then a function in <code class="docutils literal notranslate"><span class="pre">Controller</span></code> is called, which handles the behavior. In the <code class="docutils literal notranslate"><span class="pre">Network</span></code> class everything network related is handled.</p>
 <div class="section" id="module-client">
 <span id="main-class"></span><h2>Main Class<a class="headerlink" href="#module-client" title="Permalink to this headline">¶</a></h2>
+<p>The Main Module of Routenfinder-Client</p>
 <dl class="py function">
 <dt id="client.main">
-<code class="sig-prename descclassname">client.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.main" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">client.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.main" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the main method.
 The command line options are defined here.
 You can call this programm with <code class="docutils literal notranslate"><span class="pre">client.py</span></code>.
@@ -189,25 +191,26 @@ and forwarded to the specific classes.</p>
 <p>Author: Christian Kemmerling</p>
 <dl class="py class">
 <dt id="controller.Controller">
-<em class="property">class </em><code class="sig-prename descclassname">controller.</code><code class="sig-name descname">Controller</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conf_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">controller.</span></code><code class="sig-name descname"><span class="pre">Controller</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller" title="Permalink to this definition">¶</a></dt>
 <dd><p>The main controller of the programm.
 Every command will call a function in this class.</p>
 <dl class="py method">
 <dt id="controller.Controller.answer_format">
-<em class="property">static </em><code class="sig-name descname">answer_format</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">answer</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.answer_format" title="Permalink to this definition">¶</a></dt>
-<dd><p>ToDo</p>
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">answer_format</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">answer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.answer_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method converts the string answer from the server
+into a dictionary.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.config">
-<code class="sig-name descname">config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">config</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.config" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method handles the command line UI config options.
 It is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">config</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.create_config_file">
-<code class="sig-name descname">create_config_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.create_config_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">create_config_file</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.create_config_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is called when no configfile is found
 or a restoring to the defaults with <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">config</span> <span class="pre">-d</span></code>
 or <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">config</span> <span class="pre">--defauls</span></code> is requested.</p>
@@ -215,43 +218,56 @@ or <code class="docutils literal notranslate"><span class="pre">client.py</span>
 
 <dl class="py method">
 <dt id="controller.Controller.debug">
-<code class="sig-name descname">debug</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.debug" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">debug</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method handles the debug commands.
 It is called by the subcommand <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.route">
-<code class="sig-name descname">route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method calls the <code class="docutils literal notranslate"><span class="pre">askRoute()</span></code> function from Network.
-This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span></code>.</p>
+<code class="sig-name descname"><span class="pre">route</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span></code>.
+Sets values to: route;default</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.route_custom">
-<code class="sig-name descname">route_custom</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_custom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Custom Route</p>
+<code class="sig-name descname"><span class="pre">route_custom</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_custom" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">custom</span></code> .
+Sets values to: route;custom;customalgoname
+The third value is the name of an algo which didn’t has it own command.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="controller.Controller.route_fast">
+<code class="sig-name descname"><span class="pre">route_fast</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_fast" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">fast</span></code>.
+Sets values to: route;fast</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.route_ga">
-<code class="sig-name descname">route_ga</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_ga" title="Permalink to this definition">¶</a></dt>
-<dd><p>Genetic Algorithm</p>
+<code class="sig-name descname"><span class="pre">route_ga</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_ga" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the genetic algorithm and it’s called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">ga</span></code>.
+Sets values to: route;ga; The third value is set to improvenn or None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.route_greedy">
-<code class="sig-name descname">route_greedy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_greedy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Nearest Neighbour Algorithm</p>
+<code class="sig-name descname"><span class="pre">route_greedy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_greedy" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the Nearest Neighbour Algorithm.
+This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">greedy</span></code>.
+Sets values to: route;greedy; The third value is set to twoopt, threeopt, growingpathopt or None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.route_handler">
-<code class="sig-name descname">route_handler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em>, <em class="sig-param"><span class="n">values</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_handler" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">route_handler</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_handler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Handles actions, which all route commands do,
 like calling <code class="docutils literal notranslate"><span class="pre">Network.askRoute()</span></code> for getting the route,
 calling Output.routeFormat() to format the route
-and export the route.</p>
+and export the route.
+This Method is called by every other route function.</p>
 <dl class="simple">
 <dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
 </dd>
@@ -262,13 +278,21 @@ and export the route.</p>
 
 <dl class="py method">
 <dt id="controller.Controller.route_sa">
-<code class="sig-name descname">route_sa</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_sa" title="Permalink to this definition">¶</a></dt>
-<dd><p>Simulated Annealing Route</p>
+<code class="sig-name descname"><span class="pre">route_sa</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_sa" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the method for the Simulated Annealing algorithm and it’s called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">sa</span></code>.
+Sets values to: route;sa; The thirs value is set to improvenn, improvega or None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="controller.Controller.route_safe">
+<code class="sig-name descname"><span class="pre">route_safe</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_safe" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">safe</span></code>.
+Sets values to: route;safe</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.use_checker">
-<em class="property">static </em><code class="sig-name descname">use_checker</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em>, <em class="sig-param"><span class="n">values</span></em>, <em class="sig-param"><span class="n">use_options</span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.use_checker" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">use_checker</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.use_checker" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if argument use has viable value</p>
 </dd></dl>
 
@@ -279,19 +303,19 @@ and export the route.</p>
 <span id="network"></span><h2>Network<a class="headerlink" href="#module-network" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="network.Network">
-<em class="property">class </em><code class="sig-prename descclassname">network.</code><code class="sig-name descname">Network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conf_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">network.</span></code><code class="sig-name descname"><span class="pre">Network</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network" title="Permalink to this definition">¶</a></dt>
 <dd><p>This class handles all connections with the server.</p>
 <dl class="py method">
 <dt id="network.Network.ask_route">
-<code class="sig-name descname">ask_route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">values</span></em>, <em class="sig-param"><span class="n">verbose</span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.ask_route" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">ask_route</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.ask_route" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method asks the server for a route
 and prints the gathered route as output.
-You can call this function by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span></code>.</p>
+You can call this function by <code class="docutils literal notranslate"><span class="pre">Controller.route_handler()</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="network.Network.ping">
-<code class="sig-name descname">ping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.ping" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">ping</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.ping" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method starts a connection to the server and prints the answer.
 It can be used for debug reasions.
 This function can be called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span> <span class="pre">-p</span></code>
@@ -300,13 +324,13 @@ or <code class="docutils literal notranslate"><span class="pre">client.py</span>
 
 <dl class="py method">
 <dt id="network.Network.stop_server">
-<code class="sig-name descname">stop_server</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.stop_server" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">stop_server</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.stop_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sends a stop signal to the server</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="network.Network.test">
-<code class="sig-name descname">test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.test" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">test</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.test" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is a test method, which can be used to test some code.
 It can be called with <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span> <span class="pre">-t</span></code>
 or <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span> <span class="pre">--test</span></code>.</p>
@@ -319,18 +343,18 @@ or <code class="docutils literal notranslate"><span class="pre">client.py</span>
 <span id="filehandler"></span><h2>FileHandler<a class="headerlink" href="#module-filehandler" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="filehandler.FileHandler">
-<em class="property">class </em><code class="sig-prename descclassname">filehandler.</code><code class="sig-name descname">FileHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conf_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">filehandler.</span></code><code class="sig-name descname"><span class="pre">FileHandler</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>This class is for handling files.</p>
 <dl class="py method">
 <dt id="filehandler.FileHandler.create_config_file">
-<code class="sig-name descname">create_config_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler.create_config_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">create_config_file</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler.create_config_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates the configfile with the name of the instance variable
 <code class="docutils literal notranslate"><span class="pre">self.conf_name</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="filehandler.FileHandler.csv_export">
-<em class="property">static </em><code class="sig-name descname">csv_export</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">full_route</span></em><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler.csv_export" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">csv_export</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">full_route</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler.csv_export" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exports the given text into a csv file</p>
 </dd></dl>
 
@@ -339,20 +363,43 @@ or <code class="docutils literal notranslate"><span class="pre">client.py</span>
 </div>
 <div class="section" id="module-output">
 <span id="output"></span><h2>Output<a class="headerlink" href="#module-output" title="Permalink to this headline">¶</a></h2>
+<p>This Module contains the class Output, which handles output on the console</p>
 <dl class="py class">
 <dt id="output.Output">
-<em class="property">class </em><code class="sig-prename descclassname">output.</code><code class="sig-name descname">Output</code><a class="headerlink" href="#output.Output" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">output.</span></code><code class="sig-name descname"><span class="pre">Output</span></code><a class="headerlink" href="#output.Output" title="Permalink to this definition">¶</a></dt>
 <dd><p>This class handles the output on the console</p>
 <dl class="py method">
 <dt id="output.Output.generic">
-<code class="sig-name descname">generic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.generic" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">generic</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.generic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Just prints the given variable</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="output.Output.route_ask_string">
+<code class="sig-name descname"><span class="pre">route_ask_string</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.route_ask_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates a string which contains the values which are sent to the server.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="output.Output.route_format">
-<code class="sig-name descname">route_format</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em>, <em class="sig-param"><span class="n">route</span></em>, <em class="sig-param"><span class="n">routDistance</span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.route_format" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">route_format</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">routDistance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.route_format" title="Permalink to this definition">¶</a></dt>
 <dd><p>Formats a given route.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-gpx">
+<span id="gpx"></span><h2>GPX<a class="headerlink" href="#module-gpx" title="Permalink to this headline">¶</a></h2>
+<p>This Module is for exporting the route to a gpx file</p>
+<dl class="py class">
+<dt id="gpx.GPX">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">gpx.</span></code><code class="sig-name descname"><span class="pre">GPX</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gpx.GPX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class which contains a method to generate a gpx file</p>
+<dl class="py method">
+<dt id="gpx.GPX.genGPX">
+<code class="sig-name descname"><span class="pre">genGPX</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gpx.GPX.genGPX" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates the gpx file</p>
 </dd></dl>
 
 </dd></dl>

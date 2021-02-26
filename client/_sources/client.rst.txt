@@ -35,3 +35,9 @@ Output
 
 .. automodule:: output
         :members:
+
+GPX
+---
+
+.. automodule:: gpx
+        :members:
