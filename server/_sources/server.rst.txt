@@ -19,3 +19,9 @@ Network
 
 .. automodule:: network
         :members:
+
+Tools
+-----
+
+.. automodule:: tools
+        :members:
