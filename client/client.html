@@ -170,7 +170,12 @@
 <dl class="py function">
 <dt id="client.main">
 <code class="sig-prename descclassname"><span class="pre">client.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.main" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is the main method.
+<dd><dl class="field-list simple">
+<dt class="field-odd">Author of class</dt>
+<dd class="field-odd"><p>Christian Kemmerling</p>
+</dd>
+</dl>
+<p>This is the main method.
 The command line options are defined here.
 You can call this programm with <code class="docutils literal notranslate"><span class="pre">client.py</span></code>.
 Without arguments it will print out the helptext, which says,
@@ -186,19 +191,57 @@ the server for a route and print it as output.</p>
 <div class="section" id="module-controller">
 <span id="controller"></span><h2>Controller<a class="headerlink" href="#module-controller" title="Permalink to this headline">¶</a></h2>
 <p>This Module is the controller of the programm.
-The commands, whitch are defined in client.py will processed here
+The commands, which are defined in client.py will processed here
 and forwarded to the specific classes.</p>
-<p>Author: Christian Kemmerling</p>
 <dl class="py class">
 <dt id="controller.Controller">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">controller.</span></code><code class="sig-name descname"><span class="pre">Controller</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller" title="Permalink to this definition">¶</a></dt>
-<dd><p>The main controller of the programm.
-Every command will call a function in this class.</p>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Author of class</dt>
+<dd class="field-odd"><p>Christian Kemmerling</p>
+</dd>
+</dl>
+<p>The main controller of the programm.
+Every command from client.py will call a function in this class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>conf_name: <code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></dt><dd><p>Name of the config file</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Members</dt>
+<dd class="field-even"><dl class="simple">
+<dt>config_parser: <code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigParser</span></code></dt><dd><p>the parser for the config file</p>
+</dd>
+<dt>conf_name: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></dt><dd><p>the name of the config filehandler</p>
+</dd>
+<dt>output: <code class="xref py py-class docutils literal notranslate"><span class="pre">Output</span></code></dt><dd><p>instance of the Output class</p>
+</dd>
+<dt>filehandler: <code class="xref py py-class docutils literal notranslate"><span class="pre">FileHandler</span></code></dt><dd><p>instance of the FileHandler class.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="controller.Controller.answer_format">
 <em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">answer_format</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">answer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.answer_format" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method converts the string answer from the server
-into a dictionary.</p>
+into a dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>answer: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></dt><dd><p>the string, which should contain the answer from the server</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns a dictionary with all received variables</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -206,6 +249,14 @@ into a dictionary.</p>
 <code class="sig-name descname"><span class="pre">config</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.config" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method handles the command line UI config options.
 It is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">config</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -221,13 +272,29 @@ or <code class="docutils literal notranslate"><span class="pre">client.py</span>
 <code class="sig-name descname"><span class="pre">debug</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method handles the debug commands.
 It is called by the subcommand <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.route">
 <code class="sig-name descname"><span class="pre">route</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span></code>.
-Sets values to: <code class="docutils literal notranslate"><span class="pre">route;default</span></code></p>
+Sets values to: <code class="docutils literal notranslate"><span class="pre">route;default</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -236,20 +303,44 @@ Sets values to: <code class="docutils literal notranslate"><span class="pre">rou
 <dd><p>This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">custom</span></code> .
 Sets values to: <code class="docutils literal notranslate"><span class="pre">route;custom;customalgoname</span></code>
 The third value is the name of an algo which didn’t has it own command.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.route_fast">
 <code class="sig-name descname"><span class="pre">route_fast</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_fast" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">fast</span></code>.
-Sets values to: <code class="docutils literal notranslate"><span class="pre">route;fast</span></code></p>
+Sets values to: <code class="docutils literal notranslate"><span class="pre">route;fast</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.route_ga">
 <code class="sig-name descname"><span class="pre">route_ga</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_ga" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the genetic algorithm and it’s called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">ga</span></code>.
-Sets values to: <code class="docutils literal notranslate"><span class="pre">route;ga;USE</span></code> The third value is set to improvenn or None</p>
+Sets values to: <code class="docutils literal notranslate"><span class="pre">route;ga;USE</span></code> The third value is set to <cite>improvenn</cite> or <cite>None</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -257,7 +348,15 @@ Sets values to: <code class="docutils literal notranslate"><span class="pre">rou
 <code class="sig-name descname"><span class="pre">route_greedy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_greedy" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the Nearest Neighbour Algorithm.
 This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">greedy</span></code>.
-Sets values to: <code class="docutils literal notranslate"><span class="pre">route;greedy;USE</span></code> The third value is set to twoopt, threeopt, growingpathopt or None</p>
+Sets values to: <code class="docutils literal notranslate"><span class="pre">route;greedy;USE</span></code> The third value is set to <cite>twoopt</cite>, <cite>threeopt</cite>, <cite>growingpathopt</cite> or <cite>None</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -268,10 +367,14 @@ like calling <code class="docutils literal notranslate"><span class="pre">Networ
 calling Output.routeFormat() to format the route
 and export the route.
 This Method is called by every other route function.</p>
-<dl class="simple">
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
 <dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
 </dd>
-<dt>values: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></dt><dd><p>contains the values, which will be sendet to the server.</p>
+<dt>values: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></dt><dd><p>contains the values, which will be sendet to the server</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </dd></dl>
@@ -280,20 +383,57 @@ This Method is called by every other route function.</p>
 <dt id="controller.Controller.route_sa">
 <code class="sig-name descname"><span class="pre">route_sa</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_sa" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the method for the Simulated Annealing algorithm and it’s called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">sa</span></code>.
-Sets values to: <code class="docutils literal notranslate"><span class="pre">route;sa;USE</span></code> The third value is set to improvenn, improvega or None</p>
+Sets values to: <code class="docutils literal notranslate"><span class="pre">route;sa;USE</span></code> The third value is set to <cite>improvenn</cite>, <cite>improvega</cite> or <cite>None</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.route_safe">
 <code class="sig-name descname"><span class="pre">route_safe</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.route_safe" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">route</span> <span class="pre">safe</span></code>.
-Sets values to: <code class="docutils literal notranslate"><span class="pre">route;safe</span></code></p>
+Sets values to: <code class="docutils literal notranslate"><span class="pre">route;safe</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="controller.Controller.use_checker">
 <em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">use_checker</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.use_checker" title="Permalink to this definition">¶</a></dt>
-<dd><p>Checks if argument use has viable value</p>
+<dd><p>Checks if argument use has viable value, and add
+the value to the use values which will be sent to
+the server. If the value is not viable, None will
+be added instead.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
+</dd>
+<dt>values: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></dt><dd><p>contains the values to be sent to the server later. In this method the use option will be added to the values.</p>
+</dd>
+<dt>use_options: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></dt><dd><p>contains a list of strings with the viable options for use</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns the values with the use option added as third argument</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -301,14 +441,39 @@ Sets values to: <code class="docutils literal notranslate"><span class="pre">rou
 </div>
 <div class="section" id="module-network">
 <span id="network"></span><h2>Network<a class="headerlink" href="#module-network" title="Permalink to this headline">¶</a></h2>
+<p>Module for interacting with the server</p>
 <dl class="py class">
 <dt id="network.Network">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">network.</span></code><code class="sig-name descname"><span class="pre">Network</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network" title="Permalink to this definition">¶</a></dt>
-<dd><p>This class handles all connections with the server.</p>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Authors of class</dt>
+<dd class="field-odd"><p>Christian Kemmerling, Simon Sonntag</p>
+</dd>
+</dl>
+<p>This class handles all connections with the server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>conf_name: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></dt><dd><p>Name of the config file</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Members</dt>
+<dd class="field-even"><dl class="simple">
+<dt>configparser: <code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigParser</span></code></dt><dd><p>the parser to parse the config file</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="network.Network.ask_route">
 <code class="sig-name descname"><span class="pre">ask_route</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.ask_route" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method asks the server for a route
+<dd><dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Christian Kemmerling, Simon Sonntag</p>
+</dd>
+</dl>
+<p>This method asks the server for a route
 and prints the gathered route as output.
 You can call this function by <code class="docutils literal notranslate"><span class="pre">Controller.route_handler()</span></code>.</p>
 </dd></dl>
@@ -316,7 +481,12 @@ You can call this function by <code class="docutils literal notranslate"><span c
 <dl class="py method">
 <dt id="network.Network.ping">
 <code class="sig-name descname"><span class="pre">ping</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.ping" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method starts a connection to the server and prints the answer.
+<dd><dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Simon Sonntag</p>
+</dd>
+</dl>
+<p>This method starts a connection to the server and prints the answer.
 It can be used for debug reasions.
 This function can be called by <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span> <span class="pre">-p</span></code>
 or <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span> <span class="pre">--ping</span></code>.</p>
@@ -325,13 +495,23 @@ or <code class="docutils literal notranslate"><span class="pre">client.py</span>
 <dl class="py method">
 <dt id="network.Network.stop_server">
 <code class="sig-name descname"><span class="pre">stop_server</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.stop_server" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sends a stop signal to the server</p>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Christian Kemmerling</p>
+</dd>
+</dl>
+<p>Sends a stop signal to the server</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="network.Network.test">
 <code class="sig-name descname"><span class="pre">test</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.Network.test" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is a test method, which can be used to test some code.
+<dd><dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Simon Sonntag</p>
+</dd>
+</dl>
+<p>This is a test method, which can be used to test some code.
 It can be called with <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span> <span class="pre">-t</span></code>
 or <code class="docutils literal notranslate"><span class="pre">client.py</span> <span class="pre">debug</span> <span class="pre">--test</span></code>.</p>
 </dd></dl>
@@ -341,10 +521,32 @@ or <code class="docutils literal notranslate"><span class="pre">client.py</span>
 </div>
 <div class="section" id="module-filehandler">
 <span id="filehandler"></span><h2>FileHandler<a class="headerlink" href="#module-filehandler" title="Permalink to this headline">¶</a></h2>
+<p>This Module contains a class with methods for handling files</p>
 <dl class="py class">
 <dt id="filehandler.FileHandler">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">filehandler.</span></code><code class="sig-name descname"><span class="pre">FileHandler</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler" title="Permalink to this definition">¶</a></dt>
-<dd><p>This class is for handling files.</p>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Author of class</dt>
+<dd class="field-odd"><p>Christian Kemmerling</p>
+</dd>
+</dl>
+<p>This class is for handling files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>conf_name: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></dt><dd><p>Name of the config file</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Members</dt>
+<dd class="field-even"><dl class="simple">
+<dt>conf_name: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></dt><dd><p>the name of the config file</p>
+</dd>
+<dt>config_parser: <code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigParser</span></code></dt><dd><p>the parser to parse the config file</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="filehandler.FileHandler.create_config_file">
 <code class="sig-name descname"><span class="pre">create_config_file</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler.create_config_file" title="Permalink to this definition">¶</a></dt>
@@ -356,6 +558,14 @@ or <code class="docutils literal notranslate"><span class="pre">client.py</span>
 <dt id="filehandler.FileHandler.csv_export">
 <em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">csv_export</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">full_route</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#filehandler.FileHandler.csv_export" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exports the given text into a csv file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>full_route: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></dt><dd><p>contains the full_route</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -363,27 +573,60 @@ or <code class="docutils literal notranslate"><span class="pre">client.py</span>
 </div>
 <div class="section" id="module-output">
 <span id="output"></span><h2>Output<a class="headerlink" href="#module-output" title="Permalink to this headline">¶</a></h2>
-<p>This Module contains the class Output, which handles output on the console</p>
+<p>This Module contains the class Output, which handles output on the console.</p>
 <dl class="py class">
 <dt id="output.Output">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">output.</span></code><code class="sig-name descname"><span class="pre">Output</span></code><a class="headerlink" href="#output.Output" title="Permalink to this definition">¶</a></dt>
-<dd><p>This class handles the output on the console</p>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Authors of class</dt>
+<dd class="field-odd"><p>Christian Kemmerling</p>
+</dd>
+</dl>
+<p>This class handles the output on the console</p>
 <dl class="py method">
 <dt id="output.Output.generic">
 <code class="sig-name descname"><span class="pre">generic</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.generic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Just prints the given variable</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>text: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></dt><dd><p>given text which should be printed</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="output.Output.route_ask_string">
 <code class="sig-name descname"><span class="pre">route_ask_string</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.route_ask_string" title="Permalink to this definition">¶</a></dt>
-<dd><p>generates a string which contains the values which are sent to the server.</p>
+<dd><p>generates a string which contains the values which are sent to the server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>text: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></dt><dd><p>the text in this variable will be printed to the console, usually it contains the values which will be sent to the server.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="output.Output.route_format">
 <code class="sig-name descname"><span class="pre">route_format</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">routDistance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#output.Output.route_format" title="Permalink to this definition">¶</a></dt>
-<dd><p>Formats a given route.</p>
+<dd><p>Formats a given route and prints it on the console</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>args: <code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></dt><dd><p>contains the arguments from the command</p>
+</dd>
+<dt>route: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></dt><dd><p>contains the route received from the server and formated into a list</p>
+</dd>
+<dt>routDistance: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></dt><dd><p>contains the distance of the route which is received from the server</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -395,7 +638,26 @@ or <code class="docutils literal notranslate"><span class="pre">client.py</span>
 <dl class="py class">
 <dt id="gpx.GPX">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">gpx.</span></code><code class="sig-name descname"><span class="pre">GPX</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gpx.GPX" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class which contains a method to generate a gpx file</p>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Authors of class</dt>
+<dd class="field-odd"><p>Simon Sonntag, Christian Kemmerling</p>
+</dd>
+</dl>
+<p>Class which contains a method to generate a gpx file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>coordinates: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></dt><dd><p>contains the coordinates in a list of longtitude and latitude coords</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Members</dt>
+<dd class="field-even"><dl class="simple">
+<dt>coordinates: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></dt><dd><p>a list with the coordinates which the gpx file should contain</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="gpx.GPX.genGPX">
 <code class="sig-name descname"><span class="pre">genGPX</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gpx.GPX.genGPX" title="Permalink to this definition">¶</a></dt>
