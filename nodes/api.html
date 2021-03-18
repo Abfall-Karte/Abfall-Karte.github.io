@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>API Reference &mdash; OSM DATA 0.1 documentation</title>
+  <title>API Reference &mdash; OSM DATA 0.4.1 documentation</title>
   
 
   
@@ -40,7 +40,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="OSM DATA 0.1 documentation" href="index.html"/>
+    <link rel="top" title="OSM DATA 0.4.1 documentation" href="index.html"/>
         <link rel="prev" title="Welcome to OSM DATA’s documentation!" href="index.html"/> 
 
   
@@ -184,7 +184,7 @@
 <dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#overpy.Result" title="overpy.Result"><em>overpy.Result</em></a>) – Expand the result with the elements from this result.</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If provided parameter is not instance of <a class="reference internal" href="#overpy.Result" title="overpy.Result"><code class="xref py py-class docutils literal"><span class="pre">overpy.Result</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.9)"><strong>ValueError</strong></a> – If provided parameter is not instance of <a class="reference internal" href="#overpy.Result" title="overpy.Result"><code class="xref py py-class docutils literal"><span class="pre">overpy.Result</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -260,7 +260,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<em>xml.etree.ElementTree.Element</em>) – Root element</p></li>
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element" title="(in Python v3.9)"><em>xml.etree.ElementTree.Element</em></a>) – Root element</p></li>
 <li><p><strong>api</strong> (<em>Overpass</em>) – </p></li>
 <li><p><strong>parser</strong> (<em>Integer</em>) – Specify the parser to use(DOM or SAX)</p></li>
 </ul>
@@ -526,7 +526,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>child</strong> (<em>xml.etree.ElementTree.Element</em>) – XML node to be parsed</p></li>
+<li><p><strong>child</strong> (<a class="reference external" href="https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element" title="(in Python v3.9)"><em>xml.etree.ElementTree.Element</em></a>) – XML node to be parsed</p></li>
 <li><p><strong>result</strong> (<a class="reference internal" href="#overpy.Result" title="overpy.Result"><em>overpy.Result</em></a>) – The result this node belongs to</p></li>
 </ul>
 </dd>
@@ -539,7 +539,7 @@
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>overpy.exception.ElementDataWrongType</strong> – If name of the xml child node doesn’t match</p></li>
-<li><p><strong>ValueError</strong> – If a tag doesn’t have a name</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.9)"><strong>ValueError</strong></a> – If a tag doesn’t have a name</p></li>
 </ul>
 </dd>
 </dl>
@@ -622,7 +622,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>child</strong> (<em>xml.etree.ElementTree.Element</em>) – XML node to be parsed</p></li>
+<li><p><strong>child</strong> (<a class="reference external" href="https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element" title="(in Python v3.9)"><em>xml.etree.ElementTree.Element</em></a>) – XML node to be parsed</p></li>
 <li><p><strong>result</strong> (<a class="reference internal" href="#overpy.Result" title="overpy.Result"><em>overpy.Result</em></a>) – The result this node belongs to</p></li>
 </ul>
 </dd>
@@ -635,8 +635,8 @@
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>overpy.exception.ElementDataWrongType</strong> – If name of the xml child node doesn’t match</p></li>
-<li><p><strong>ValueError</strong> – If the ref attribute of the xml node is not provided</p></li>
-<li><p><strong>ValueError</strong> – If a tag doesn’t have a name</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.9)"><strong>ValueError</strong></a> – If the ref attribute of the xml node is not provided</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.9)"><strong>ValueError</strong></a> – If a tag doesn’t have a name</p></li>
 </ul>
 </dd>
 </dl>
@@ -667,7 +667,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Leon Pawlick.
+        &copy; Copyright 2021, Leon Pawlick.
 
     </p>
   </div>
@@ -689,7 +689,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.1',
+            VERSION:'0.4.1',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
