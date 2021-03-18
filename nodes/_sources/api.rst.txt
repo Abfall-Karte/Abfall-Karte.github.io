@@ -1,0 +1,25 @@
+
+.. currentmodule:: osm_data
+
+API Reference
+===============
+
+The following section outlines the API of the data downloaded from OSM
+
+OSM Data
+--------------
+
+.. autoclass:: OSM_data
+    :members:
+
+
+.. currentmodule:: overpy
+
+.. autoclass:: Result
+    :members:
+
+.. autoclass:: Node
+    :members:
+
+.. autoclass:: Way
+    :members:
